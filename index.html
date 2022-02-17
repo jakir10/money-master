@@ -22,11 +22,37 @@
 </head>
 
 <body>
-    <h1>Expense Tracker</h1>
+    <section class="container">
+        <div class="row ">
+            <h1 class="title">Expense Tracker</h1>
 
-
-
-
+            <div class="row col-lg-6">
+                <img src="images/Money.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="row col-lg-6">
+                <form action="">
+                    <h2>Income</h2>
+                    <label>Income:</label>
+                    <input type="text" id="income-input" placeholder="Monthly Income"><br><br>
+                    <h2>Expense</h2>
+                    <label>Food:</label>
+                    <input type="text" id="food-input" placeholder="Food Expense"><br><br>
+                    <label>Rent:</label>
+                    <input type="text" id="rent-input" placeholder="Rent Expense"><br><br>
+                    <label>Cloths:</label>
+                    <input type="text" id="cloths-input" placeholder="Shopping Expense"><br><br>
+                    <button id="expense-calculate" type="button" class="btn btn-success">Calculate</button>
+                    <h2>Total Expense : <span id="total-expanse">5500</span></h2>
+                    <h2>Balance : <span id="total-balance">4500</span></h2>
+                    <label>Save:</label>
+                    <input type="text" id="save-parcent" placeholder="Write %"><span class="p-2">%</span><button
+                        id="total-saveings" type="button" class="btn btn-success">Save</button>
+                    <h2>Saving Amount : <span id="saved-amount">2000</span></h2>
+                    <h2>Remining Balance : <span id="reamining-balance">2500</span></h2>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
     <!-- JavaScript Link -->
