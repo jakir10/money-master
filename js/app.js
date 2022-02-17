@@ -22,6 +22,8 @@ document.getElementById('expense-calculate').addEventListener('click', function 
 
     const clothsText = getCloths.value;
     const clothsExpense = parseFloat(clothsText);
+
+
     //get all expense calculation
     const result = foodExpense + rentExpense + clothsExpense;
 
@@ -41,6 +43,36 @@ document.getElementById('expense-calculate').addEventListener('click', function 
     const balance = document.getElementById('total-balance');
     const balanceText = balance.innerText;
     balance.innerText = totalBalance;
+
+
+    //Savings calculation part
+
+    document.getElementById('total-saveings').addEventListener('click', function () {
+
+
+        let getIncome = document.getElementById('income-input');
+        //income ballance
+        let incomeText = getIncome.value;
+        let totalIncome = parseFloat(incomeText);
+
+
+        let getParcent = document.getElementById('save-parcent');
+        let parcentText = getParcent.value;
+        let parcentage = parseFloat(parcentText);
+
+        //Parcentage
+        let saveAmount = (parcentage / 100) * totalIncome;
+        let savingAmount = document.getElementById('saved-amount');
+        let expenseAmountText = savingAmount.innerText;
+        savingAmount.innerText = saveAmount;
+
+        //remining balance
+        let reminingBalance = document.getElementById('reamining-balance');
+        let totalRemBalance = reminingBalance.innerText;
+        reminingBalance.innerText = totalBalance - saveAmount;
+
+
+    })
 
 
 })
