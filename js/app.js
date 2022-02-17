@@ -23,6 +23,16 @@ document.getElementById('expense-calculate').addEventListener('click', function 
     const clothsText = getCloths.value;
     const clothsExpense = parseFloat(clothsText);
 
+    //Expense error handling
+    if (isNaN(foodExpense) || foodExpense < 0) {
+        return alert('Enter a Valdi Number')
+    }
+    else if (isNaN(rentExpense) || rentExpense < 0) {
+        return alert('Enter a Valdi Number')
+    }
+    else if (isNaN(clothsExpense) || clothsExpense < 0) {
+        return alert('Enter a Valdi Number')
+    }
 
     //get all expense calculation
     const result = foodExpense + rentExpense + clothsExpense;
