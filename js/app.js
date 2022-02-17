@@ -1,11 +1,11 @@
+// Income & Expense Calculation
 document.getElementById('expense-calculate').addEventListener('click', function () {
 
     let getIncome = document.getElementById('income-input');
 
-    //income ballance
+    //income balance
     let incomeText = getIncome.value;
     let totalIncome = parseFloat(incomeText);
-    // getIncome.value = '';
 
 
     //all expense
@@ -42,6 +42,11 @@ document.getElementById('expense-calculate').addEventListener('click', function 
     const expenseText = totalExpense.innerText;
     totalExpense.innerText = result;
 
+    //error massage for lower income than expense
+    if ((totalExpense.innerText) > totalIncome) {
+        return alert('Expense is bigger then income')
+    }
+
     //clear input field
     getFood.value = '';
     getRent.value = '';
@@ -56,10 +61,7 @@ document.getElementById('expense-calculate').addEventListener('click', function 
 
 
     //Savings calculation part
-
     document.getElementById('total-saveings').addEventListener('click', function () {
-
-
         let getIncome = document.getElementById('income-input');
         //income ballance
         let incomeText = getIncome.value;
@@ -81,9 +83,12 @@ document.getElementById('expense-calculate').addEventListener('click', function 
         let totalRemBalance = reminingBalance.innerText;
         reminingBalance.innerText = totalBalance - saveAmount;
 
+        //alert for not enough balance for savings
+        if (balance.innerText < savingAmount.innerText) {
+            return alert('Not Enough Balance for savings')
+        }
 
     })
-
 
 })
 
