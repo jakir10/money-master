@@ -35,6 +35,14 @@ document.getElementById('expense-calculate').addEventListener('click', function 
     getRent.value = '';
     getCloths.value = '';
 
+    //get total Balance
+    let totalBalance = totalIncome - result;
+
+    const balance = document.getElementById('total-balance');
+    const balanceText = balance.innerText;
+    balance.innerText = totalBalance;
+
+
 })
 
 
